@@ -117,26 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="aceptar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\aceptar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="usuario (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ticket" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ticket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ver" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="factura" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\factura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="toolStripTabItem2.TabGroup" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </metadata>
+  <metadata name="toolStripEx2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>134, 17</value>
+  </metadata>
+  <metadata name="toolStripTabItem1.TabGroup" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </metadata>
+  <metadata name="toolStripEx1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="toolStripTabItem3.TabGroup" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value />
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="UsuarioToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG5SURBVEhL5ZS/K61xHMef7ib+AFIGYUIKsdqMFossBiKD
+        QcqP+Y43w+2WblEmi2ITkk0GIokymfwoZfXjurxezw+d8z0oHQve9ep8vp/P+/N+nnM6zxN9G5XDLByn
+        WNv7EFXDFdzDYoq1PWdFawMuoTI+JbK25+zd+pF+qjJ4gJ/xKV/2nOnJlLtboFr4DdewDl1QBY/QA6Hs
+        OdOj1x13zTCrQDtwAmOwBC7XwwVsQih7zvTodcddM8zKUytoao5PiQ7gDwyAszloSbG250yP3kxmODPz
+        WR1gsy4+JdqC+aSMJuEW9Ii1PaVHbyYz9JiZpyPQ2A3ToKkNVAV0wmiKtT2lR6877pphVoH86v6O/8CH
+        aQgaYA+yOw9xpkevO+6aYVaB2kHjFIxAH5zDLvRCU4A9Z3r0uuOuGWY9qxRWwDvyCb1J8fwfauA1OdOj
+        N9szw7OZZke/4A76ocRGqr9wmJRvSo/eTGaYZabZ0SksWASagf2kfFN69IYy0+z46wxaBCr2Amaa/QUu
+        4L9g2CJQsRcw0+xoDXy3T8B4DttwFvReQo/e3J5ZZq5C1AjL4Kv2IzHT7E+tKHoCZS6qeHg1uXgAAAAA
+        SUVORK5CYII=
+</value>
   </data>
 </root>
