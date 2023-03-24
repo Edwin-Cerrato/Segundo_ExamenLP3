@@ -34,16 +34,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtCliente = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtTipoSoporte = new System.Windows.Forms.TextBox();
+            this.txtCliente = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtDescripcionSolicitud = new System.Windows.Forms.TextBox();
             this.txtDescripcionRespuesta = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtDescripcionSolicitud = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,6 +51,10 @@
             this.txtDescuento = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtTotalAPagar = new System.Windows.Forms.TextBox();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
+            this.TipoSoporteComboBox = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtIdentidad = new System.Windows.Forms.TextBox();
             this.groupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -105,47 +108,43 @@
             // groupBox
             // 
             this.groupBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox.Controls.Add(this.txtTipoSoporte);
+            this.groupBox.Controls.Add(this.txtIdentidad);
+            this.groupBox.Controls.Add(this.label12);
+            this.groupBox.Controls.Add(this.TipoSoporteComboBox);
+            this.groupBox.Controls.Add(this.btnBuscarCliente);
             this.groupBox.Controls.Add(this.label5);
             this.groupBox.Controls.Add(this.txtCliente);
             this.groupBox.Controls.Add(this.label4);
             this.groupBox.Location = new System.Drawing.Point(3, 104);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(646, 66);
+            this.groupBox.Size = new System.Drawing.Size(646, 76);
             this.groupBox.TabIndex = 5;
             this.groupBox.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 16);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Cliente:";
-            // 
-            // txtCliente
-            // 
-            this.txtCliente.Location = new System.Drawing.Point(65, 15);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(205, 22);
-            this.txtCliente.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(287, 21);
+            this.label5.Location = new System.Drawing.Point(335, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 16);
             this.label5.TabIndex = 2;
             this.label5.Text = "Tipo Soporte:";
             // 
-            // txtTipoSoporte
+            // txtCliente
             // 
-            this.txtTipoSoporte.Location = new System.Drawing.Point(380, 18);
-            this.txtTipoSoporte.Name = "txtTipoSoporte";
-            this.txtTipoSoporte.Size = new System.Drawing.Size(213, 22);
-            this.txtTipoSoporte.TabIndex = 3;
+            this.txtCliente.Location = new System.Drawing.Point(77, 43);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.Size = new System.Drawing.Size(193, 22);
+            this.txtCliente.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Cliente:";
             // 
             // groupBox1
             // 
@@ -176,18 +175,11 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtDescripcionSolicitud);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(3, 182);
+            this.groupBox2.Location = new System.Drawing.Point(3, 186);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(646, 95);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
-            // 
-            // txtDescripcionSolicitud
-            // 
-            this.txtDescripcionSolicitud.Location = new System.Drawing.Point(151, 12);
-            this.txtDescripcionSolicitud.Name = "txtDescripcionSolicitud";
-            this.txtDescripcionSolicitud.Size = new System.Drawing.Size(428, 22);
-            this.txtDescripcionSolicitud.TabIndex = 8;
             // 
             // txtDescripcionRespuesta
             // 
@@ -204,6 +196,13 @@
             this.label7.Size = new System.Drawing.Size(154, 16);
             this.label7.TabIndex = 9;
             this.label7.Text = "Descripcion Respuesta: ";
+            // 
+            // txtDescripcionSolicitud
+            // 
+            this.txtDescripcionSolicitud.Location = new System.Drawing.Point(151, 12);
+            this.txtDescripcionSolicitud.Name = "txtDescripcionSolicitud";
+            this.txtDescripcionSolicitud.Size = new System.Drawing.Size(428, 22);
+            this.txtDescripcionSolicitud.TabIndex = 8;
             // 
             // label8
             // 
@@ -269,6 +268,40 @@
             this.txtTotalAPagar.Size = new System.Drawing.Size(141, 22);
             this.txtTotalAPagar.TabIndex = 16;
             // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.Image = global::Vista.Properties.Resources.buscar__1_;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(276, 14);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(34, 25);
+            this.btnBuscarCliente.TabIndex = 4;
+            this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            // 
+            // TipoSoporteComboBox
+            // 
+            this.TipoSoporteComboBox.FormattingEnabled = true;
+            this.TipoSoporteComboBox.Location = new System.Drawing.Point(430, 12);
+            this.TipoSoporteComboBox.Name = "TipoSoporteComboBox";
+            this.TipoSoporteComboBox.Size = new System.Drawing.Size(179, 24);
+            this.TipoSoporteComboBox.TabIndex = 17;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(4, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(66, 16);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Identidad:";
+            // 
+            // txtIdentidad
+            // 
+            this.txtIdentidad.Location = new System.Drawing.Point(77, 15);
+            this.txtIdentidad.Name = "txtIdentidad";
+            this.txtIdentidad.Size = new System.Drawing.Size(193, 22);
+            this.txtIdentidad.TabIndex = 19;
+            this.txtIdentidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdentidad_KeyPress);
+            // 
             // TicketsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -287,7 +320,7 @@
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TicketsForm";
             this.Text = "Tickets";
             this.groupBox.ResumeLayout(false);
@@ -309,7 +342,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
         private System.Windows.Forms.GroupBox groupBox;
-        private System.Windows.Forms.TextBox txtTipoSoporte;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label label4;
@@ -327,5 +359,9 @@
         private System.Windows.Forms.TextBox txtDescuento;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtTotalAPagar;
+        private System.Windows.Forms.Button btnBuscarCliente;
+        private System.Windows.Forms.TextBox txtIdentidad;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox TipoSoporteComboBox;
     }
 }
