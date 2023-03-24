@@ -34,6 +34,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox = new System.Windows.Forms.GroupBox();
+            this.txtIdentidad = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.TipoSoporteComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,9 +55,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtTotalAPagar = new System.Windows.Forms.TextBox();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
-            this.TipoSoporteComboBox = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtIdentidad = new System.Windows.Forms.TextBox();
             this.groupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -120,6 +120,35 @@
             this.groupBox.Size = new System.Drawing.Size(646, 76);
             this.groupBox.TabIndex = 5;
             this.groupBox.TabStop = false;
+            // 
+            // txtIdentidad
+            // 
+            this.txtIdentidad.Location = new System.Drawing.Point(77, 15);
+            this.txtIdentidad.Name = "txtIdentidad";
+            this.txtIdentidad.Size = new System.Drawing.Size(193, 22);
+            this.txtIdentidad.TabIndex = 19;
+            this.txtIdentidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdentidad_KeyPress);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(4, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(66, 16);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Identidad:";
+            // 
+            // TipoSoporteComboBox
+            // 
+            this.TipoSoporteComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TipoSoporteComboBox.FormattingEnabled = true;
+            this.TipoSoporteComboBox.Items.AddRange(new object[] {
+            "Reparación",
+            "Limpieza "});
+            this.TipoSoporteComboBox.Location = new System.Drawing.Point(430, 12);
+            this.TipoSoporteComboBox.Name = "TipoSoporteComboBox";
+            this.TipoSoporteComboBox.Size = new System.Drawing.Size(179, 24);
+            this.TipoSoporteComboBox.TabIndex = 17;
             // 
             // label5
             // 
@@ -276,31 +305,7 @@
             this.btnBuscarCliente.Size = new System.Drawing.Size(34, 25);
             this.btnBuscarCliente.TabIndex = 4;
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
-            // 
-            // TipoSoporteComboBox
-            // 
-            this.TipoSoporteComboBox.FormattingEnabled = true;
-            this.TipoSoporteComboBox.Location = new System.Drawing.Point(430, 12);
-            this.TipoSoporteComboBox.Name = "TipoSoporteComboBox";
-            this.TipoSoporteComboBox.Size = new System.Drawing.Size(179, 24);
-            this.TipoSoporteComboBox.TabIndex = 17;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(4, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(66, 16);
-            this.label12.TabIndex = 18;
-            this.label12.Text = "Identidad:";
-            // 
-            // txtIdentidad
-            // 
-            this.txtIdentidad.Location = new System.Drawing.Point(77, 15);
-            this.txtIdentidad.Name = "txtIdentidad";
-            this.txtIdentidad.Size = new System.Drawing.Size(193, 22);
-            this.txtIdentidad.TabIndex = 19;
-            this.txtIdentidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdentidad_KeyPress);
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // TicketsForm
             // 
@@ -323,6 +328,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TicketsForm";
             this.Text = "Tickets";
+            this.Load += new System.EventHandler(this.TicketsForm_Load);
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
             this.groupBox1.ResumeLayout(false);
