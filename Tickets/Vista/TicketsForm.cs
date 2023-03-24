@@ -1,5 +1,7 @@
 ﻿using Datos;
 using Entidades;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Vista
@@ -13,6 +15,15 @@ namespace Vista
         }
         Cliente miCliente = null;
         ClienteDB clienteDB = new ClienteDB();
+
+
+
+        List<DetalleFactura> listaDetalles = new List<DetalleFactura>();
+        FacturaDB facturaDB = new FacturaDB();
+        decimal subTotal = 0;
+        decimal isv = 0;
+        decimal totalAPagar = 0;
+        decimal descuento = 0;
 
 
 
@@ -45,6 +56,46 @@ namespace Vista
         private void TicketsForm_Load(object sender, System.EventArgs e)
         {
             //txtEmpleado.Text = System.Threading.CurrentPrincipal.Identity.Name;
+
         }
+
+        private void txtDescripcionSolicitud_TextChanged(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void btnGuardar_Click(object sender, System.EventArgs e)
+        {
+            Factura mifactura = new Factura();
+
+            mifactura.Fecha = FechaDateTimePicker.Value;
+            // mifactura.CodigoUsuario = System.Threading.CurrentPrincipal.Identity.Name;
+            mifactura.Identidad = miCliente.Identidad;
+            string text = Convert.ToString(txtImpuesto.Text);
+            mifactura.ISV = isv;
+            mifactura.Descuento = descuento;
+            mifactura.TotalAPagar = totalAPagar;
+
+            mifactura.DescripcionSolicitud = Convert.ToString(txtDescripcionSolicitud.Text);
+
+            mifactura.TipoSoporte = Convert.ToString(TipoSoporteComboBox.Text);
+
+
+            bool inserto = facturaDB.Guardar(mifactura, listaDetalles);
+
+            if (inserto)
+            {
+                txtIdentidad.Focus();
+                MessageBox.Show("Factura registrada exitosamente");
+                // printPreviewDialog1.Document = printDocument1;
+                // printPreviewDialog1.ShowDialog();
+                //  LimpiarControles();
+            }
+            else
+                MessageBox.Show("No se pudo registrar la factura");
+        }
+
+
     }
 }
+

@@ -43,5 +43,10 @@ namespace Vista
         {
             dgvClientes.DataSource = clienteDB.DevolverClientesPorNombre(txtNombre.Text);
         }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

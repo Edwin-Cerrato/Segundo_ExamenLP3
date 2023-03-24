@@ -71,7 +71,6 @@ namespace Datos
         }
 
 
-
         public DataTable DevolverClientesPorNombre(string nombre)
         {
             DataTable dt = new DataTable();

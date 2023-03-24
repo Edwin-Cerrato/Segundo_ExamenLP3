@@ -37,6 +37,7 @@
             this.txtIdentidad = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.TipoSoporteComboBox = new System.Windows.Forms.ComboBox();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,7 +55,8 @@
             this.txtDescuento = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtTotalAPagar = new System.Windows.Forms.TextBox();
-            this.btnBuscarCliente = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -145,10 +147,20 @@
             this.TipoSoporteComboBox.Items.AddRange(new object[] {
             "Reparación",
             "Limpieza "});
-            this.TipoSoporteComboBox.Location = new System.Drawing.Point(430, 12);
+            this.TipoSoporteComboBox.Location = new System.Drawing.Point(428, 13);
             this.TipoSoporteComboBox.Name = "TipoSoporteComboBox";
             this.TipoSoporteComboBox.Size = new System.Drawing.Size(179, 24);
             this.TipoSoporteComboBox.TabIndex = 17;
+            // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.Image = global::Vista.Properties.Resources.buscar__1_;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(276, 14);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(34, 25);
+            this.btnBuscarCliente.TabIndex = 4;
+            this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // label5
             // 
@@ -232,6 +244,7 @@
             this.txtDescripcionSolicitud.Name = "txtDescripcionSolicitud";
             this.txtDescripcionSolicitud.Size = new System.Drawing.Size(428, 22);
             this.txtDescripcionSolicitud.TabIndex = 8;
+            this.txtDescripcionSolicitud.TextChanged += new System.EventHandler(this.txtDescripcionSolicitud_TextChanged);
             // 
             // label8
             // 
@@ -297,21 +310,32 @@
             this.txtTotalAPagar.Size = new System.Drawing.Size(141, 22);
             this.txtTotalAPagar.TabIndex = 16;
             // 
-            // btnBuscarCliente
+            // btnGuardar
             // 
-            this.btnBuscarCliente.Image = global::Vista.Properties.Resources.buscar__1_;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(276, 14);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(34, 25);
-            this.btnBuscarCliente.TabIndex = 4;
-            this.btnBuscarCliente.UseVisualStyleBackColor = true;
-            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
+            this.btnGuardar.Location = new System.Drawing.Point(15, 388);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(88, 38);
+            this.btnGuardar.TabIndex = 17;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(127, 390);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(85, 34);
+            this.btnCancelar.TabIndex = 18;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // TicketsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(653, 444);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtTotalAPagar);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtDescuento);
@@ -369,5 +393,7 @@
         private System.Windows.Forms.TextBox txtIdentidad;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox TipoSoporteComboBox;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
