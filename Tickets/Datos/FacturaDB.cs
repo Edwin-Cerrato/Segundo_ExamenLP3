@@ -17,16 +17,11 @@ namespace Datos
             try
             {
                 StringBuilder sqlFactura = new StringBuilder();
-                sqlFactura.Append(" INSERT INTO factura (Fecha, Identidad, CodigoUsuario, ISV, Descuento, TotalAPagar,DescripcionSolicitud,TipoSoporte) VALUES (@Fecha, @IdentidadCliente, @CodigoUsuario, @ISV, @Descuento, @TotalAPagar,@DescripcionSolicitud,@TipoSoporte); ");
+                sqlFactura.Append(" INSERT INTO factura VALUES (@Fecha, @Identidad, @CodigoUsuario, @ISV, @Descuento, @TotalAPagar,@DescripcionSolicitud,@TipoSoporte); ");
                 sqlFactura.Append(" SELECT LAST_INSERT_ID(); ");
 
-
-
-
                 StringBuilder sqlDetalle = new StringBuilder();
-                sqlDetalle.Append(" INSERT INTO detallefactura (IdFactura,Precio) VALUES (@IdFactura, @Preciol); ");
-
-
+                sqlDetalle.Append(" INSERT INTO VALUES (@IdFactura, @Precio); ");
 
                 using (MySqlConnection con = new MySqlConnection(cadena))
                 {
@@ -54,7 +49,6 @@ namespace Datos
                             {
                                 cmd2.CommandType = System.Data.CommandType.Text;
                                 cmd2.Parameters.Add("@IdFactura", MySqlDbType.Int32).Value = idFactura;
-
                                 cmd2.Parameters.Add("@Precio", MySqlDbType.Decimal).Value = detalle.precio;
 
                                 cmd2.ExecuteNonQuery();

@@ -54,7 +54,12 @@ namespace Vista
             if (usuario != null)
             {
                 if (usuario.EstaActivo)
+
                 {
+
+                    //System.Security.Principal.GenericIdentity identidad = new
+                    //System.Security.Principal.GenericIdentity(usuario.CodigoUsuario);
+
                     //Mostramos el Menu
 
                     Menu menuFormulario = new Menu();

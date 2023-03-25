@@ -19,6 +19,7 @@ namespace Vista
         {
             txtNombre.Focus();
             dgvClientes.DataSource = clienteDB.DevolverClientes();
+
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

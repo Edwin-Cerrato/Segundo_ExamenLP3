@@ -34,9 +34,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox = new System.Windows.Forms.GroupBox();
+            this.txtTipoSoporte = new System.Windows.Forms.TextBox();
             this.txtIdentidad = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.TipoSoporteComboBox = new System.Windows.Forms.ComboBox();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
@@ -110,9 +110,9 @@
             // groupBox
             // 
             this.groupBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox.Controls.Add(this.txtTipoSoporte);
             this.groupBox.Controls.Add(this.txtIdentidad);
             this.groupBox.Controls.Add(this.label12);
-            this.groupBox.Controls.Add(this.TipoSoporteComboBox);
             this.groupBox.Controls.Add(this.btnBuscarCliente);
             this.groupBox.Controls.Add(this.label5);
             this.groupBox.Controls.Add(this.txtCliente);
@@ -122,6 +122,13 @@
             this.groupBox.Size = new System.Drawing.Size(646, 76);
             this.groupBox.TabIndex = 5;
             this.groupBox.TabStop = false;
+            // 
+            // txtTipoSoporte
+            // 
+            this.txtTipoSoporte.Location = new System.Drawing.Point(427, 18);
+            this.txtTipoSoporte.Name = "txtTipoSoporte";
+            this.txtTipoSoporte.Size = new System.Drawing.Size(178, 22);
+            this.txtTipoSoporte.TabIndex = 20;
             // 
             // txtIdentidad
             // 
@@ -139,18 +146,6 @@
             this.label12.Size = new System.Drawing.Size(66, 16);
             this.label12.TabIndex = 18;
             this.label12.Text = "Identidad:";
-            // 
-            // TipoSoporteComboBox
-            // 
-            this.TipoSoporteComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TipoSoporteComboBox.FormattingEnabled = true;
-            this.TipoSoporteComboBox.Items.AddRange(new object[] {
-            "Reparación",
-            "Limpieza "});
-            this.TipoSoporteComboBox.Location = new System.Drawing.Point(428, 13);
-            this.TipoSoporteComboBox.Name = "TipoSoporteComboBox";
-            this.TipoSoporteComboBox.Size = new System.Drawing.Size(179, 24);
-            this.TipoSoporteComboBox.TabIndex = 17;
             // 
             // btnBuscarCliente
             // 
@@ -199,6 +194,7 @@
             this.groupBox1.Size = new System.Drawing.Size(647, 63);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label6
             // 
@@ -392,8 +388,8 @@
         private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.TextBox txtIdentidad;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox TipoSoporteComboBox;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtTipoSoporte;
     }
 }
