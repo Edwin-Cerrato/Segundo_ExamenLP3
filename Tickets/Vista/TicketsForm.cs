@@ -57,8 +57,7 @@ namespace Vista
         private void TicketsForm_Load(object sender, System.EventArgs e)
         {
             txtIdentidad.Focus();
-            //txtEmpleado.Text = System.Threading.CurrentPrincipal.Identity.Name;
-
+            txtEmpleado.Text = System.Threading.Thread.CurrentPrincipal.Identity.Name;
         }
 
         private void txtDescripcionSolicitud_TextChanged(object sender, System.EventArgs e)
@@ -71,14 +70,19 @@ namespace Vista
             Factura mifactura = new Factura();
             miCliente = new Cliente();
 
+            DetalleFactura detalle = new DetalleFactura();
+
             mifactura.Fecha = FechaDateTimePicker.Value;
-            mifactura.CodigoUsuario = txtEmpleado.Text;
-            mifactura.Identidad = miCliente.Identidad;
+            mifactura.CodigoUsuario = System.Threading.Thread.CurrentPrincipal.Identity.Name;
+            mifactura.IdentidadCliente = miCliente.Identidad;
             mifactura.ISV = isv;
             mifactura.Descuento = descuento;
             mifactura.TotalAPagar = totalAPagar;
+            //mifactura.DescripcionSolicitud = mifactura.DescripcionSolicitud;
+            //mifactura.TipoSoporte = mifactura.TipoSoporte;
             mifactura.DescripcionSolicitud = Convert.ToString(txtDescripcionSolicitud.Text);
             mifactura.TipoSoporte = Convert.ToString(txtTipoSoporte.Text);
+
 
 
             bool inserto = facturaDB.Guardar(mifactura, listaDetalles);
@@ -87,8 +91,7 @@ namespace Vista
             {
                 txtIdentidad.Focus();
                 MessageBox.Show("Factura registrada exitosamente");
-                // printPreviewDialog1.Document = printDocument1;
-                // printPreviewDialog1.ShowDialog();
+
                 LimpiarControles();
             }
             else
@@ -124,6 +127,76 @@ namespace Vista
         {
 
         }
+
+        private void txtDescuento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtDescripcionRespuesta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+
+
+
+        }
+
+        private void txtIdentidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTipoSoporte_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtDescripcionSolicitud.Text = Convert.ToString(txtTipoSoporte.Text);
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+
+
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void Operacion()
+        {
+            DetalleFactura detalle = new DetalleFactura();
+
+
+
+            isv = Convert.ToDecimal(txtPrecio.Text) * 0.15M;
+            descuento = Convert.ToDecimal(txtPrecio.Text) * 0.10M;
+            txtDescuento.Text = descuento.ToString();
+            totalAPagar = Convert.ToDecimal(txtPrecio.Text) - isv + descuento;
+
+
+            detalle.Precio = Convert.ToDecimal(txtPrecio.Text);
+            listaDetalles.Add(detalle);
+            DetalleDataGridView.DataSource = null;
+            DetalleDataGridView.DataSource = listaDetalles;
+
+            txtImpuesto.Text = isv.ToString();
+
+            txtTotalAPagar.Text = totalAPagar.ToString();
+
+        }
+
+        private void txtTotalAPagar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Operacion();
+        }
     }
 }
+
 

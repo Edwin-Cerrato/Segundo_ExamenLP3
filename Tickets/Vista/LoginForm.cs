@@ -56,9 +56,11 @@ namespace Vista
                 if (usuario.EstaActivo)
 
                 {
+                    System.Security.Principal.GenericIdentity identidad = new System.Security.Principal.GenericIdentity(usuario.CodigoUsuario);
+                    System.Security.Principal.GenericPrincipal principal = new System.Security.Principal.GenericPrincipal(identidad, null);
+                    System.Threading.Thread.CurrentPrincipal = principal;
 
-                    //System.Security.Principal.GenericIdentity identidad = new
-                    //System.Security.Principal.GenericIdentity(usuario.CodigoUsuario);
+
 
                     //Mostramos el Menu
 

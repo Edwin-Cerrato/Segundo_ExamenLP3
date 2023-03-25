@@ -7,7 +7,7 @@ namespace Entidades
         public int Id { get; set; }
 
         public DateTime Fecha { get; set; }
-        public string Identidad { get; set; }
+        public string IdentidadCliente { get; set; }
         public string CodigoUsuario { get; set; }
 
         public decimal ISV { get; set; }
@@ -21,11 +21,11 @@ namespace Entidades
         {
         }
 
-        public Factura(int id, DateTime fecha, string identidad, string codigoUsuario, decimal iSV, decimal descuento, decimal totalAPagar, string descripcionSolicitud, string tipoSoporte)
+        public Factura(int id, DateTime fecha, string identidadCliente, string codigoUsuario, decimal iSV, decimal descuento, decimal totalAPagar, string descripcionSolicitud, string tipoSoporte)
         {
             Id = id;
             Fecha = fecha;
-            Identidad = identidad;
+            IdentidadCliente = identidadCliente;
             CodigoUsuario = codigoUsuario;
             ISV = iSV;
             Descuento = descuento;

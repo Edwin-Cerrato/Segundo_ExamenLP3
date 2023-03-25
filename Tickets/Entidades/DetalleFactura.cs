@@ -6,7 +6,7 @@
 
         public int IdFactura { get; set; }
 
-        public decimal precio { get; set; }
+        public decimal Precio { get; set; }
 
         public DetalleFactura()
         {
@@ -16,7 +16,7 @@
         {
             Id = id;
             IdFactura = idFactura;
-            this.precio = precio;
+            Precio = precio;
         }
     }
 }
