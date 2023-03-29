@@ -17,7 +17,7 @@ namespace Datos
             try
             {
                 StringBuilder sqlFactura = new StringBuilder();
-                sqlFactura.Append(" INSERT INTO factura (Fecha, IdentidadCliente,CodigoUsuario, ISV,Descuento,  TotalAPagar,DescripcionSolicitud,TipoSoporte) VALUES (@Fecha, @IdentidadCliente,@CodigoUsuario, @ISV, @Descuento, @TotalAPagar,@DescripcionSolicitud,@TipoSoporte); ");
+                sqlFactura.Append(" INSERT INTO factura (Fecha, IdentidadCliente, ISV,Descuento,  TotalAPagar,DescripcionSolicitud,TipoSoporte) VALUES (@Fecha,@CodigoUsuario, @ISV, @Descuento, @TotalAPagar,@DescripcionSolicitud,@TipoSoporte); ");
                 sqlFactura.Append(" SELECT LAST_INSERT_ID(); ");
 
                 StringBuilder sqlDetalle = new StringBuilder();
@@ -35,7 +35,7 @@ namespace Datos
                         {
                             cmd1.CommandType = System.Data.CommandType.Text;
                             cmd1.Parameters.Add("@Fecha", MySqlDbType.DateTime).Value = factura.Fecha;
-                            cmd1.Parameters.Add("@IdentidadCliente", MySqlDbType.VarChar, 25).Value = factura.IdentidadCliente;
+                            //cmd1.Parameters.Add("@IdentidadCliente", MySqlDbType.VarChar, 25).Value = factura.IdentidadCliente;
                             cmd1.Parameters.Add("@CodigoUsuario", MySqlDbType.VarChar, 20).Value = factura.CodigoUsuario;
                             cmd1.Parameters.Add("@ISV", MySqlDbType.Decimal).Value = factura.ISV;
                             cmd1.Parameters.Add("@Descuento", MySqlDbType.Decimal).Value = factura.Descuento;

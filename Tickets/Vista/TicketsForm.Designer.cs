@@ -37,6 +37,7 @@
             this.txtTipoSoporte = new System.Windows.Forms.TextBox();
             this.txtIdentidad = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.groupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -132,7 +132,7 @@
             // 
             // txtTipoSoporte
             // 
-            this.txtTipoSoporte.Location = new System.Drawing.Point(441, 13);
+            this.txtTipoSoporte.Location = new System.Drawing.Point(437, 14);
             this.txtTipoSoporte.Name = "txtTipoSoporte";
             this.txtTipoSoporte.Size = new System.Drawing.Size(178, 22);
             this.txtTipoSoporte.TabIndex = 20;
@@ -156,6 +156,16 @@
             this.label12.Size = new System.Drawing.Size(80, 19);
             this.label12.TabIndex = 18;
             this.label12.Text = "Identidad:";
+            // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.Image = global::Vista.Properties.Resources.buscar__1_;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(281, 13);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(34, 25);
+            this.btnBuscarCliente.TabIndex = 4;
+            this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // label5
             // 
@@ -223,7 +233,7 @@
             // 
             // txtDescripcionRespuesta
             // 
-            this.txtDescripcionRespuesta.Location = new System.Drawing.Point(151, 49);
+            this.txtDescripcionRespuesta.Location = new System.Drawing.Point(174, 52);
             this.txtDescripcionRespuesta.Name = "txtDescripcionRespuesta";
             this.txtDescripcionRespuesta.Size = new System.Drawing.Size(428, 22);
             this.txtDescripcionRespuesta.TabIndex = 10;
@@ -241,7 +251,7 @@
             // 
             // txtDescripcionSolicitud
             // 
-            this.txtDescripcionSolicitud.Location = new System.Drawing.Point(151, 12);
+            this.txtDescripcionSolicitud.Location = new System.Drawing.Point(174, 15);
             this.txtDescripcionSolicitud.Name = "txtDescripcionSolicitud";
             this.txtDescripcionSolicitud.ReadOnly = true;
             this.txtDescripcionSolicitud.Size = new System.Drawing.Size(428, 22);
@@ -373,16 +383,6 @@
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnBuscarCliente
-            // 
-            this.btnBuscarCliente.Image = global::Vista.Properties.Resources.buscar__1_;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(281, 13);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(34, 25);
-            this.btnBuscarCliente.TabIndex = 4;
-            this.btnBuscarCliente.UseVisualStyleBackColor = true;
-            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // TicketsForm
             // 

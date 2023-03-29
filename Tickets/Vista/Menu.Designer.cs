@@ -31,17 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.ribbonControlAdv1 = new Syncfusion.Windows.Forms.Tools.RibbonControlAdv();
             this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
-            this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
-            this.toolStripTabItem3 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.UsuarioToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
+            this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.ReservarToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripTabItem3 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
             this.toolStripTabItem1.Panel.SuspendLayout();
-            this.toolStripTabItem2.Panel.SuspendLayout();
             this.toolStripEx1.SuspendLayout();
+            this.toolStripTabItem2.Panel.SuspendLayout();
             this.toolStripEx2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,6 +96,34 @@
             this.toolStripTabItem1.Tag = "1";
             this.toolStripTabItem1.Text = "Control Usuarios";
             // 
+            // toolStripEx1
+            // 
+            this.toolStripEx1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripEx1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.toolStripEx1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripEx1.Image = null;
+            this.toolStripEx1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.UsuarioToolStripButton});
+            this.toolStripEx1.Location = new System.Drawing.Point(0, 1);
+            this.toolStripEx1.Name = "toolStripEx1";
+            this.toolStripEx1.Office12Mode = false;
+            this.toolStripEx1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.toolStripEx1.Size = new System.Drawing.Size(40, 65);
+            this.toolStripEx1.TabIndex = 0;
+            // 
+            // UsuarioToolStripButton
+            // 
+            this.UsuarioToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsuarioToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("UsuarioToolStripButton.Image")));
+            this.UsuarioToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.UsuarioToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.UsuarioToolStripButton.Name = "UsuarioToolStripButton";
+            this.UsuarioToolStripButton.Size = new System.Drawing.Size(65, 62);
+            this.UsuarioToolStripButton.Text = "Usuarios";
+            this.UsuarioToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.UsuarioToolStripButton.Click += new System.EventHandler(this.UsuarioToolStripButton_Click);
+            // 
             // toolStripTabItem2
             // 
             this.toolStripTabItem2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -113,38 +141,6 @@
             this.toolStripTabItem2.Tag = "2";
             this.toolStripTabItem2.Text = "Solicitud Mantenimiento";
             // 
-            // toolStripTabItem3
-            // 
-            this.toolStripTabItem3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripTabItem3.Name = "toolStripTabItem3";
-            // 
-            // ribbonControlAdv1.ribbonPanel3
-            // 
-            this.toolStripTabItem3.Panel.Name = "ribbonPanel3";
-            this.toolStripTabItem3.Panel.ScrollPosition = 0;
-            this.toolStripTabItem3.Panel.TabIndex = 4;
-            this.toolStripTabItem3.Panel.Text = "Salir";
-            this.toolStripTabItem3.Position = 2;
-            this.toolStripTabItem3.Size = new System.Drawing.Size(59, 25);
-            this.toolStripTabItem3.Tag = "3";
-            this.toolStripTabItem3.Text = "Salir";
-            // 
-            // toolStripEx1
-            // 
-            this.toolStripEx1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStripEx1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.toolStripEx1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.toolStripEx1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStripEx1.Image = null;
-            this.toolStripEx1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.UsuarioToolStripButton});
-            this.toolStripEx1.Location = new System.Drawing.Point(0, 1);
-            this.toolStripEx1.Name = "toolStripEx1";
-            this.toolStripEx1.Office12Mode = false;
-            this.toolStripEx1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx1.Size = new System.Drawing.Size(72, 65);
-            this.toolStripEx1.TabIndex = 0;
-            // 
             // toolStripEx2
             // 
             this.toolStripEx2.Dock = System.Windows.Forms.DockStyle.None;
@@ -161,18 +157,6 @@
             this.toolStripEx2.Size = new System.Drawing.Size(114, 65);
             this.toolStripEx2.TabIndex = 0;
             // 
-            // UsuarioToolStripButton
-            // 
-            this.UsuarioToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsuarioToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("UsuarioToolStripButton.Image")));
-            this.UsuarioToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.UsuarioToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.UsuarioToolStripButton.Name = "UsuarioToolStripButton";
-            this.UsuarioToolStripButton.Size = new System.Drawing.Size(65, 48);
-            this.UsuarioToolStripButton.Text = "Usuarios";
-            this.UsuarioToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.UsuarioToolStripButton.Click += new System.EventHandler(this.UsuarioToolStripButton_Click);
-            // 
             // ReservarToolStripButton
             // 
             this.ReservarToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -186,13 +170,28 @@
             this.ReservarToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ReservarToolStripButton.Click += new System.EventHandler(this.ReservarToolStripButton_Click);
             // 
+            // toolStripTabItem3
+            // 
+            this.toolStripTabItem3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripTabItem3.Name = "toolStripTabItem3";
+            // 
+            // ribbonControlAdv1.ribbonPanel3
+            // 
+            this.toolStripTabItem3.Panel.Name = "ribbonPanel3";
+            this.toolStripTabItem3.Panel.ScrollPosition = 0;
+            this.toolStripTabItem3.Panel.TabIndex = 4;
+            this.toolStripTabItem3.Panel.Text = "Salir";
+            this.toolStripTabItem3.Position = 2;
+            this.toolStripTabItem3.Size = new System.Drawing.Size(59, 25);
+            this.toolStripTabItem3.Tag = "3";
+            this.toolStripTabItem3.Text = "Salir";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 411);
             this.Controls.Add(this.ribbonControlAdv1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.IsMdiContainer = true;
             this.Name = "Menu";
             this.Text = "Menu";
@@ -201,10 +200,10 @@
             this.ribbonControlAdv1.PerformLayout();
             this.toolStripTabItem1.Panel.ResumeLayout(false);
             this.toolStripTabItem1.Panel.PerformLayout();
-            this.toolStripTabItem2.Panel.ResumeLayout(false);
-            this.toolStripTabItem2.Panel.PerformLayout();
             this.toolStripEx1.ResumeLayout(false);
             this.toolStripEx1.PerformLayout();
+            this.toolStripTabItem2.Panel.ResumeLayout(false);
+            this.toolStripTabItem2.Panel.PerformLayout();
             this.toolStripEx2.ResumeLayout(false);
             this.toolStripEx2.PerformLayout();
             this.ResumeLayout(false);
